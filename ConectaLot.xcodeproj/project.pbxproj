@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		A2168D2E2AC71C5F00555C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2168D2C2AC71C5F00555C23 /* Main.storyboard */; };
 		A2168D302AC71C6000555C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2168D2F2AC71C6000555C23 /* Assets.xcassets */; };
 		A2168D332AC71C6000555C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2168D312AC71C6000555C23 /* LaunchScreen.storyboard */; };
+		CEA025152AD07F74005F443C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA025142AD07F74005F443C /* Home.storyboard */; };
+		CEA025182AD08170005F443C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CEA025172AD08170005F443C /* Lottie */; };
+		CEA0251A2AD08286005F443C /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CEA025192AD08286005F443C /* loading.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		A2168D2F2AC71C6000555C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2168D322AC71C6000555C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2168D342AC71C6000555C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA025142AD07F74005F443C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		CEA025192AD08286005F443C /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA025182AD08170005F443C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +65,12 @@
 				A2168D262AC71C5F00555C23 /* AppDelegate.swift */,
 				A2168D282AC71C5F00555C23 /* SceneDelegate.swift */,
 				A2168D2A2AC71C5F00555C23 /* ViewController.swift */,
+				CEA025192AD08286005F443C /* loading.json */,
 				A2168D2C2AC71C5F00555C23 /* Main.storyboard */,
 				A2168D2F2AC71C6000555C23 /* Assets.xcassets */,
 				A2168D312AC71C6000555C23 /* LaunchScreen.storyboard */,
 				A2168D342AC71C6000555C23 /* Info.plist */,
+				CEA025142AD07F74005F443C /* Home.storyboard */,
 			);
 			path = ConectaLot;
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = ConectaLot;
+			packageProductDependencies = (
+				CEA025172AD08170005F443C /* Lottie */,
+			);
 			productName = ConectaLot;
 			productReference = A2168D232AC71C5F00555C23 /* ConectaLot.app */;
 			productType = "com.apple.product-type.application";
@@ -103,7 +114,7 @@
 				};
 			};
 			buildConfigurationList = A2168D1E2AC71C5F00555C23 /* Build configuration list for PBXProject "ConectaLot" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = A2168D1A2AC71C5F00555C23;
+			packageReferences = (
+				CEA025162AD08170005F443C /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = A2168D242AC71C5F00555C23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +142,8 @@
 				A2168D332AC71C6000555C23 /* LaunchScreen.storyboard in Resources */,
 				A2168D302AC71C6000555C23 /* Assets.xcassets in Resources */,
 				A2168D2E2AC71C5F00555C23 /* Main.storyboard in Resources */,
+				CEA025152AD07F74005F443C /* Home.storyboard in Resources */,
+				CEA0251A2AD08286005F443C /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +314,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,8 +343,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEA025162AD08170005F443C /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEA025172AD08170005F443C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEA025162AD08170005F443C /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2168D1B2AC71C5F00555C23 /* Project object */;
 }
